@@ -19,7 +19,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Passbolt\\Ee\\": "./plugins_ee/Ee/src"
+            "Passbolt\\Ee\\": "./plugins_ee/Ee/src",
+            "Passbolt\\EeFoo\\": "./plugins_ee/EeFoo/src"
         }
     },
     "config": {
