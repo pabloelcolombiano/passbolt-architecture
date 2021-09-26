@@ -17,6 +17,9 @@
     },
     "scripts": {
         "ee": "COMPOSER=./plugins_ee/composer-ee.json composer",
-        "cloud": "COMPOSER=./plugins_cloud/composer-cloud.json composer"
+        "cloud": "COMPOSER=./plugins_cloud/composer-cloud.json composer",
+        "update-ce": "git checkout ce && git checkout main src plugins_ce",
+        "update-ee": "git checkout ee && git checkout main src plugins_ce plugins_ee",
+        "update-cloud": "git checkout cloud && git checkout main src plugins_ce plugins_ee "
     }
 }
