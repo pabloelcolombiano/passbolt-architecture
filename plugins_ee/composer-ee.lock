@@ -108,11 +108,11 @@
         },
         {
             "name": "passbolt/architecture",
-            "version": "dev-main",
+            "version": "dev-ee",
             "dist": {
                 "type": "path",
                 "url": ".",
-                "reference": "816e4fba307a5b7753df60c69b7baf74f5401c5e"
+                "reference": "14bcc9353037f6ecda312364aa8723c2cfdf460f"
             },
             "require": {
                 "php": ">=7.3",

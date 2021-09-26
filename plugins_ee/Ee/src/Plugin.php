@@ -8,6 +8,6 @@ class Plugin
     {
         echo "I am the EE plugin\n";
         new \Passbolt\Ce\Plugin();
-        echo "Load some EE specific plugins now.\n";
+        new \Passbolt\EeFoo\Plugin();
     }
 }
