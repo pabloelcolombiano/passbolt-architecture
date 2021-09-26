@@ -1,0 +1,22 @@
+{
+    "name": "passbolt/architecture",
+    "description": "Pilot study for Passbolt architecture",
+    "type": "project",
+    "require": {
+        "php": ">=7.3",
+        "ramsey/uuid": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "./src",
+            "Passbolt\\Ce\\": "./plugins_ce/Ce/src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "ee": "COMPOSER=./plugins_ee/composer-ee.json composer",
+        "cloud": "COMPOSER=./plugins_cloud/composer-cloud.json composer"
+    }
+}
