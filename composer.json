@@ -20,6 +20,9 @@
         "cloud": "COMPOSER=./plugins_cloud/composer-cloud.json composer",
         "refresh-ce": "git checkout ce && git checkout main src plugins_ce",
         "refresh-ee": "git checkout ee && git checkout main src plugins_ce plugins_ee",
-        "refresh-cloud": "git checkout cloud && git checkout main src plugins_ce plugins_ee "
+        "refresh-cloud": "git checkout cloud && git checkout main src plugins_ce plugins_ee ",
+        "fetch-ce": "git checkout ce src plugins_ce",
+        "fetch-ee": "git checkout ee src plugins_ce plugins_ee",
+        "fetch-cloud": "git checkout cloud src plugins_ce plugins_ee "
     }
 }
