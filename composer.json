@@ -1,7 +1,7 @@
 {
     "name": "passbolt/architecture",
     "description": "Pilot study for Passbolt architecture",
-    "type": "package",
+    "type": "project",
     "require": {
         "php": ">=7.3",
         "ramsey/uuid": "^4.2"
