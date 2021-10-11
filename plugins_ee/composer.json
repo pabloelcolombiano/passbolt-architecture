@@ -5,10 +5,15 @@
     "repositories": [
         {
             "type": "path",
+            "url": "."
+        },
+        {
+            "type": "path",
             "url": "./plugins_ce"
         }
     ],
     "require": {
+        "passbolt/architecture": "@dev",
         "passbolt/ce-dependencies": "@dev",
         "duosecurity/duo_php": "^1.0"
     },

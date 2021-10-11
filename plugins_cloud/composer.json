@@ -5,6 +5,10 @@
     "repositories": [
         {
             "type": "path",
+            "url": "."
+        },
+        {
+            "type": "path",
             "url": "./plugins_ce"
         },
         {
@@ -13,13 +17,14 @@
         }
     ],
     "require": {
+        "passbolt/architecture": "@dev",
         "passbolt/ce-dependencies": "@dev",
         "passbolt/ee-dependencies": "@dev",
         "league/flysystem-google-cloud-storage": "^2.0"
     },
     "autoload": {
         "psr-4": {
-            "Passbolt\\Cloud\\": "./Cloud/src"
+            "Passbolt\\Cloud\\": "./plugins_cloud/Cloud/src"
         }
     },
     "config": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "96cc35210d76dbece821b51fc4f906cc",
+    "content-hash": "c419333c08ea01959d521485fb17ce95",
     "packages": [
         {
             "name": "brick/math",
@@ -107,23 +107,51 @@
             "time": "2020-01-08T21:14:20+00:00"
         },
         {
-            "name": "passbolt/ce-dependencies",
+            "name": "passbolt/architecture",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "./plugins_ce",
-                "reference": "3e6b75a5b035314d1e0f4d658dd6304bd68ec59c"
+                "url": ".",
+                "reference": "88e4f7220bde5647052b63f60b3e106e4c264641"
             },
             "require": {
                 "php": ">=7.3",
                 "ramsey/uuid": "^4.2"
             },
-            "type": "project",
+            "type": "metapackage",
             "autoload": {
                 "psr-4": {
-                    "App\\": "./src",
-                    "Passbolt\\Ce\\": "./plugins_ce/Ce/src"
+                    "App\\": "./src"
                 }
+            },
+            "scripts": {
+                "ce": [
+                    "COMPOSER=./plugins_ce/composer.json composer"
+                ],
+                "ee": [
+                    "COMPOSER=./plugins_ee/composer.json composer"
+                ],
+                "cloud": [
+                    "COMPOSER=./plugins_cloud/composer.json composer"
+                ],
+                "refresh-ce": [
+                    "git checkout ce && git checkout main src plugins_ce"
+                ],
+                "refresh-ee": [
+                    "git checkout ee && git checkout main src plugins_ce plugins_ee"
+                ],
+                "refresh-cloud": [
+                    "git checkout cloud && git checkout main src plugins_ce plugins_ee "
+                ],
+                "fetch-ce": [
+                    "git checkout ce src plugins_ce"
+                ],
+                "fetch-ee": [
+                    "git checkout ee src plugins_ce plugins_ee"
+                ],
+                "fetch-cloud": [
+                    "git checkout cloud src plugins_ce plugins_ee "
+                ]
             },
             "description": "Pilot study for Passbolt architecture",
             "transport-options": {
@@ -131,17 +159,39 @@
             }
         },
         {
+            "name": "passbolt/ce-dependencies",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./plugins_ce",
+                "reference": "689da12155b62c8447f52e43d62059a5c190186a"
+            },
+            "require": {
+                "passbolt/architecture": "@dev"
+            },
+            "type": "metapackage",
+            "autoload": {
+                "psr-4": {
+                    "Passbolt\\Ce\\": "./plugins_ce/Ce/src"
+                }
+            },
+            "description": "Additional requirements for Passbolt CE",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "ramsey/collection",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/collection.git",
-                "reference": "eaca1dc1054ddd10cbd83c1461907bee6fb528fa"
+                "reference": "cccc74ee5e328031b15640b51056ee8d3bb66c0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/collection/zipball/eaca1dc1054ddd10cbd83c1461907bee6fb528fa",
-                "reference": "eaca1dc1054ddd10cbd83c1461907bee6fb528fa",
+                "url": "https://api.github.com/repos/ramsey/collection/zipball/cccc74ee5e328031b15640b51056ee8d3bb66c0a",
+                "reference": "cccc74ee5e328031b15640b51056ee8d3bb66c0a",
                 "shasum": ""
             },
             "require": {
@@ -195,7 +245,7 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/collection/issues",
-                "source": "https://github.com/ramsey/collection/tree/1.2.1"
+                "source": "https://github.com/ramsey/collection/tree/1.2.2"
             },
             "funding": [
                 {
@@ -207,7 +257,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-08-06T03:41:06+00:00"
+            "time": "2021-10-10T03:01:02+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -553,6 +603,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "passbolt/architecture": 20,
         "passbolt/ce-dependencies": 20
     },
     "prefer-stable": false,
