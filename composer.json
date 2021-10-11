@@ -9,10 +9,9 @@
     "autoload": {
         "psr-4": {
             "App\\": "./src",
-            "Passbolt\\": [
-                "./plugins_ee/Ee/src",
-                "./plugins_ce/Ce/src"
-            ]
+            "Passbolt\\Ce\\": "./plugins_ce/Ce/src",
+            "Passbolt\\Ee\\": "./plugins_ee/Ee/src",
+            "Passbolt\\EeFoo\\": "./plugins_ee/EeFoo/src"
         }
     },
     "config": {
