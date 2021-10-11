@@ -5,11 +5,16 @@
     "repositories": [
         {
             "type": "path",
-            "url": "."
+            "url": "./plugins_ce"
+        },
+        {
+            "type": "path",
+            "url": "./plugins_ee"
         }
     ],
     "require": {
-        "passbolt/architecture": "@dev",
+        "passbolt/ce-dependencies": "@dev",
+        "passbolt/ee-dependencies": "@dev",
         "league/flysystem-google-cloud-storage": "^2.0"
     },
     "autoload": {
