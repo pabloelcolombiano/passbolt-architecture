@@ -1,10 +1,7 @@
 {
     "name": "passbolt/architecture",
     "description": "Pilot study for Passbolt architecture",
-    "type": "metapackage",
-    "config": {
-        "sort-packages": true
-    },
+    "type": "package",
     "require": {
         "php": ">=7.3",
         "ramsey/uuid": "^4.2"
@@ -25,5 +22,8 @@
         "fetch-ce": "git checkout ce src plugins_ce",
         "fetch-ee": "git checkout ee src plugins_ce plugins_ee",
         "fetch-cloud": "git checkout cloud src plugins_ce plugins_ee "
+    },
+    "config": {
+        "sort-packages": true
     }
 }
