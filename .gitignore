@@ -1,4 +1,5 @@
 /vendor/
 .idea
+plugins_ce/composer.lock
 plugins_ee
 plugins_cloud

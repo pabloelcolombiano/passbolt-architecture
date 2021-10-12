@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3071e350945cda40ffca1aa5b602403b",
+    "content-hash": "77c77b620fa7a8741fb91c66f3303ab7",
     "packages": [
         {
             "name": "brick/math",
@@ -67,19 +67,17 @@
             "time": "2021-08-15T20:50:18+00:00"
         },
         {
-            "name": "passbolt/ce-dependencies",
+            "name": "passbolt/ce-autoload",
             "version": "dev-ce",
             "dist": {
                 "type": "path",
                 "url": "./plugins_ce",
-                "reference": "7315d2f3016f3b8e7f6fe6475700688f7778a644"
-            },
-            "require": {
-                "passbolt/architecture": "@dev"
+                "reference": "cc973720699ba238e661c86ec20638886f208027"
             },
             "type": "metapackage",
             "autoload": {
                 "psr-4": {
+                    "App\\": "./src",
                     "Passbolt\\Ce\\": "./plugins_ce/Ce/src",
                     "Passbolt\\CeBar\\": "./plugins_ce/CeBar/src",
                     "Passbolt\\CeFoo\\": "./plugins_ce/CeFoo/src"
@@ -513,7 +511,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "passbolt/ce-dependencies": 20
+        "passbolt/ce-autoload": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
