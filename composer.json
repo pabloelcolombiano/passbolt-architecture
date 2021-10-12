@@ -2,7 +2,14 @@
     "name": "passbolt/architecture",
     "description": "Pilot study for Passbolt architecture",
     "type": "project",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./plugins_ce"
+        }
+    ],
     "require": {
+        "passbolt/ce-dependencies": "@dev",
         "php": ">=7.3",
         "ramsey/uuid": "^4.2"
     },
