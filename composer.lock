@@ -994,13 +994,13 @@
             "dist": {
                 "type": "path",
                 "url": ".",
-                "reference": "88e4f7220bde5647052b63f60b3e106e4c264641"
+                "reference": "00079ab3bc87a9dab65a9f4cb36834f640ce362c"
             },
             "require": {
                 "php": ">=7.3",
                 "ramsey/uuid": "^4.2"
             },
-            "type": "metapackage",
+            "type": "project",
             "autoload": {
                 "psr-4": {
                     "App\\": "./src"
@@ -1015,6 +1015,9 @@
                 ],
                 "cloud": [
                     "COMPOSER=./plugins_cloud/composer.json composer"
+                ],
+                "post-cloud": [
+                    "cp ./plugins_cloud/composer.lock ."
                 ],
                 "refresh-ce": [
                     "git checkout ce && git checkout main src plugins_ce"
@@ -1068,7 +1071,7 @@
             "dist": {
                 "type": "path",
                 "url": "./plugins_ee",
-                "reference": "a221b57ced8fa0e96d28db2a909a6e0d7efa0474"
+                "reference": "512dd32c303f6e8911af0faa9390546159c4f20b"
             },
             "require": {
                 "duosecurity/duo_php": "^1.0",
@@ -1078,7 +1081,8 @@
             "type": "metapackage",
             "autoload": {
                 "psr-4": {
-                    "Passbolt\\Ee\\": "./plugins_ee/Ee/src"
+                    "Passbolt\\Ee\\": "./plugins_ee/Ee/src",
+                    "Passbolt\\EeFoo\\": "./plugins_ee/EeFoo/src"
                 }
             },
             "description": "Additional requirements for Passbolt EE",

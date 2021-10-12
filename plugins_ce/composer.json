@@ -13,7 +13,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Passbolt\\Ce\\": "./plugins_ce/Ce/src"
+            "Passbolt\\Ce\\": "./plugins_ce/Ce/src",
+            "Passbolt\\CeFoo\\": "./plugins_ce/CeFoo/src"
         }
     },
     "config": {
