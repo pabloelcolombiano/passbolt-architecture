@@ -14,6 +14,7 @@
     "autoload": {
         "psr-4": {
             "Passbolt\\Ce\\": "./plugins_ce/Ce/src",
+            "Passbolt\\CeBar\\": "./plugins_ce/CeBar/src",
             "Passbolt\\CeFoo\\": "./plugins_ce/CeFoo/src"
         }
     },

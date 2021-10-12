@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "be886a3b60315e1b68091f27b8595d36",
+    "content-hash": "3071e350945cda40ffca1aa5b602403b",
     "packages": [
         {
             "name": "brick/math",
@@ -65,6 +65,30 @@
                 }
             ],
             "time": "2021-08-15T20:50:18+00:00"
+        },
+        {
+            "name": "passbolt/ce-dependencies",
+            "version": "dev-ce",
+            "dist": {
+                "type": "path",
+                "url": "./plugins_ce",
+                "reference": "7315d2f3016f3b8e7f6fe6475700688f7778a644"
+            },
+            "require": {
+                "passbolt/architecture": "@dev"
+            },
+            "type": "metapackage",
+            "autoload": {
+                "psr-4": {
+                    "Passbolt\\Ce\\": "./plugins_ce/Ce/src",
+                    "Passbolt\\CeBar\\": "./plugins_ce/CeBar/src",
+                    "Passbolt\\CeFoo\\": "./plugins_ce/CeFoo/src"
+                }
+            },
+            "description": "Additional requirements for Passbolt CE",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "ramsey/collection",
@@ -488,7 +512,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "passbolt/ce-dependencies": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
