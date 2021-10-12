@@ -21,5 +21,8 @@
             "Passbolt\\Cloud\\": "./plugins_cloud/Cloud/src",
             "Passbolt\\CloudFoo\\": "./plugins_cloud/CloudFoo/src"
         }
+    },
+    "config": {
+        "sort-packages": true
     }
 }
