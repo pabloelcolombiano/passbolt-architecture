@@ -8,5 +8,6 @@ class Plugin
     {
         echo "I am the CE plugin\n";
         new \Passbolt\CeFoo\Plugin();
+        new \Passbolt\CeBar\Plugin();
     }
 }
