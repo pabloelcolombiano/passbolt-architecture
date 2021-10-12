@@ -19,7 +19,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Passbolt\\Cloud\\": "./plugins_cloud/Cloud/src"
+            "Passbolt\\Cloud\\": "./plugins_cloud/Cloud/src",
+            "Passbolt\\CloudFoo\\": "./plugins_cloud/CloudFoo/src"
         }
     },
     "config": {
