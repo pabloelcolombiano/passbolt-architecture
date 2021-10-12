@@ -1,20 +1,15 @@
 {
-    "name": "passbolt/ee-dependencies",
+    "name": "passbolt/ee-autoload",
     "description": "Additional requirements for Passbolt EE",
     "type": "metapackage",
     "repositories": [
-        {
-            "type": "path",
-            "url": "."
-        },
         {
             "type": "path",
             "url": "./plugins_ce"
         }
     ],
     "require": {
-        "passbolt/architecture": "@dev",
-        "passbolt/ce-dependencies": "@dev",
+        "passbolt/ce-autoload": "@dev",
         "duosecurity/duo_php": "^1.0"
     },
     "autoload": {

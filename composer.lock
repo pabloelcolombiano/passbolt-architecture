@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a16eb8f6cbb8336970259c1bd5bf7954",
+    "content-hash": "cfe2c356d71b560a34e0557b143017ce",
     "packages": [
         {
             "name": "brick/math",
@@ -989,75 +989,20 @@
             "time": "2021-10-01T21:08:31+00:00"
         },
         {
-            "name": "passbolt/architecture",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": ".",
-                "reference": "00079ab3bc87a9dab65a9f4cb36834f640ce362c"
-            },
-            "require": {
-                "php": ">=7.3",
-                "ramsey/uuid": "^4.2"
-            },
-            "type": "project",
-            "autoload": {
-                "psr-4": {
-                    "App\\": "./src"
-                }
-            },
-            "scripts": {
-                "ce": [
-                    "COMPOSER=./plugins_ce/composer.json composer"
-                ],
-                "ee": [
-                    "COMPOSER=./plugins_ee/composer.json composer"
-                ],
-                "cloud": [
-                    "COMPOSER=./plugins_cloud/composer.json composer"
-                ],
-                "post-cloud": [
-                    "cp ./plugins_cloud/composer.lock ."
-                ],
-                "refresh-ce": [
-                    "git checkout ce && git checkout main src plugins_ce"
-                ],
-                "refresh-ee": [
-                    "git checkout ee && git checkout main src plugins_ce plugins_ee"
-                ],
-                "refresh-cloud": [
-                    "git checkout cloud && git checkout main src plugins_ce plugins_ee "
-                ],
-                "fetch-ce": [
-                    "git checkout ce src plugins_ce"
-                ],
-                "fetch-ee": [
-                    "git checkout ee src plugins_ce plugins_ee"
-                ],
-                "fetch-cloud": [
-                    "git checkout cloud src plugins_ce plugins_ee "
-                ]
-            },
-            "description": "Pilot study for Passbolt architecture",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "passbolt/ce-dependencies",
+            "name": "passbolt/ce-autoload",
             "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./plugins_ce",
-                "reference": "689da12155b62c8447f52e43d62059a5c190186a"
-            },
-            "require": {
-                "passbolt/architecture": "@dev"
+                "reference": "cc973720699ba238e661c86ec20638886f208027"
             },
             "type": "metapackage",
             "autoload": {
                 "psr-4": {
-                    "Passbolt\\Ce\\": "./plugins_ce/Ce/src"
+                    "App\\": "./src",
+                    "Passbolt\\Ce\\": "./plugins_ce/Ce/src",
+                    "Passbolt\\CeBar\\": "./plugins_ce/CeBar/src",
+                    "Passbolt\\CeFoo\\": "./plugins_ce/CeFoo/src"
                 }
             },
             "description": "Additional requirements for Passbolt CE",
@@ -1066,22 +1011,46 @@
             }
         },
         {
-            "name": "passbolt/ee-dependencies",
+            "name": "passbolt/cloud-autoload",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./plugins_cloud",
+                "reference": "83de7bf46ce97eb43a54655c0db780b07b4ea9b6"
+            },
+            "require": {
+                "league/flysystem-google-cloud-storage": "^2.0",
+                "passbolt/ce-autoload": "@dev",
+                "passbolt/ee-autoload": "@dev"
+            },
+            "type": "metapackage",
+            "autoload": {
+                "psr-4": {
+                    "Passbolt\\Cloud\\": "./plugins_cloud/Cloud/src"
+                }
+            },
+            "description": "Additional requirements for Passbolt Cloud",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "passbolt/ee-autoload",
             "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./plugins_ee",
-                "reference": "512dd32c303f6e8911af0faa9390546159c4f20b"
+                "reference": "ffa56e5cb15dc0ddc43e0bee91af53e545995618"
             },
             "require": {
                 "duosecurity/duo_php": "^1.0",
-                "passbolt/architecture": "@dev",
-                "passbolt/ce-dependencies": "@dev"
+                "passbolt/ce-autoload": "@dev"
             },
             "type": "metapackage",
             "autoload": {
                 "psr-4": {
                     "Passbolt\\Ee\\": "./plugins_ee/Ee/src",
+                    "Passbolt\\EeBar\\": "./plugins_ee/EeBar/src",
                     "Passbolt\\EeFoo\\": "./plugins_ee/EeFoo/src"
                 }
             },
@@ -1874,13 +1843,15 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "passbolt/architecture": 20,
-        "passbolt/ce-dependencies": 20,
-        "passbolt/ee-dependencies": 20
+        "passbolt/ce-autoload": 20,
+        "passbolt/ee-autoload": 20,
+        "passbolt/cloud-autoload": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.3"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"
 }
