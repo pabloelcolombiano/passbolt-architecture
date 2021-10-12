@@ -9,5 +9,6 @@ class Plugin
         echo "I am the EE plugin\n";
         new \Passbolt\Ce\Plugin();
         new \Passbolt\EeFoo\Plugin();
+        new \Passbolt\EeBar\Plugin();
     }
 }

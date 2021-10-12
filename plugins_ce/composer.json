@@ -1,0 +1,23 @@
+{
+    "name": "passbolt/ce-dependencies",
+    "description": "Additional requirements for Passbolt CE",
+    "type": "metapackage",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "."
+        }
+    ],
+    "require": {
+        "passbolt/architecture": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Passbolt\\Ce\\": "./plugins_ce/Ce/src",
+            "Passbolt\\CeFoo\\": "./plugins_ce/CeFoo/src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "name": "passbolt/ee-dependencies",
+    "description": "Additional requirements for Passbolt EE",
+    "type": "metapackage",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "."
+        },
+        {
+            "type": "path",
+            "url": "./plugins_ce"
+        }
+    ],
+    "require": {
+        "passbolt/architecture": "@dev",
+        "passbolt/ce-dependencies": "@dev",
+        "duosecurity/duo_php": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Passbolt\\Ee\\": "./plugins_ee/Ee/src",
+            "Passbolt\\EeBar\\": "./plugins_ee/EeBar/src",
+            "Passbolt\\EeFoo\\": "./plugins_ee/EeFoo/src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
