@@ -1016,7 +1016,7 @@
             "dist": {
                 "type": "path",
                 "url": "./plugins_cloud",
-                "reference": "783c9ad6d2486004bcea5ed0bfd3ba350c7bd896"
+                "reference": "4f7b95ff93381078524efa640f712e72a3e28db1"
             },
             "require": {
                 "passbolt/ce-autoload": "@dev",
