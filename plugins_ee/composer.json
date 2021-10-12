@@ -20,6 +20,7 @@
     "autoload": {
         "psr-4": {
             "Passbolt\\Ee\\": "./plugins_ee/Ee/src",
+            "Passbolt\\EeBar\\": "./plugins_ee/EeBar/src",
             "Passbolt\\EeFoo\\": "./plugins_ee/EeFoo/src"
         }
     },
