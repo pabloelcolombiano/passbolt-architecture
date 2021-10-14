@@ -1,6 +1,6 @@
 {
-    "name": "passbolt/community",
-    "description": "Passbolt Community",
+    "name": "passbolt/entreprise",
+    "description": "Passbolt Entreprise",
     "type": "project",
     "repositories": [
         {
