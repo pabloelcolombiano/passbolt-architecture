@@ -17,6 +17,8 @@
         }
     ],
     "require": {
+        "duosecurity/duo_php": "^1.0",
+        "league/flysystem-google-cloud-storage": "^2.0",
         "passbolt/ce-autoload": "@dev",
         "passbolt/ee-autoload": "@dev",
         "passbolt/cloud-autoload": "@dev",
@@ -24,16 +26,12 @@
         "ramsey/uuid": "^4.2"
     },
     "scripts": {
-        "ce": "COMPOSER=./plugins_ce/composer.json composer",
-        "ee": "COMPOSER=./plugins_ee/composer.json composer",
-        "cloud": "COMPOSER=./plugins_cloud/composer.json composer",
-        "post-cloud": "cp ./plugins_cloud/composer.lock .",
-        "refresh-ce": "git checkout ce && git checkout main src plugins_ce",
-        "refresh-ee": "git checkout ee && git checkout main src plugins_ce plugins_ee",
-        "refresh-cloud": "git checkout cloud && git checkout main src plugins_ce plugins_ee plugins_cloud",
-        "merge-ce-in-ee": "git checkout ee && git merge ce",
-        "merge-ee-in-cloud": "git checkout cloud && git merge ee",
-        "merge-cloud-in-develop": "git checkout develop && git merge cloud"
+        "export-ce": "git checkout ce && git checkout main src plugins_ce",
+        "export-ee": "git checkout ee && git checkout main src plugins_ce plugins_ee",
+        "export-cloud": "git checkout cloud && git checkout main src plugins_ce plugins_ee plugins_cloud",
+        "import-ce": "git checkout ee && git merge ce",
+        "import-ee": "git checkout cloud && git merge ee",
+        "import-cloud": "git checkout main && git merge cloud"
     },
     "config": {
         "sort-packages": true
