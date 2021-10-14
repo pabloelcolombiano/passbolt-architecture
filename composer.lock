@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41b9816190a7fe7df03e4dde40401c49",
+    "content-hash": "2488b3dc4562fd287a8fca529803b8f1",
     "packages": [
         {
             "name": "brick/math",
@@ -134,10 +134,9 @@
             "dist": {
                 "type": "path",
                 "url": "./plugins_ee",
-                "reference": "ffa56e5cb15dc0ddc43e0bee91af53e545995618"
+                "reference": "e3051c6ed76ea745ae60836eb32fdb29a69bc3cb"
             },
             "require": {
-                "duosecurity/duo_php": "^1.0",
                 "passbolt/ce-autoload": "@dev"
             },
             "type": "metapackage",
