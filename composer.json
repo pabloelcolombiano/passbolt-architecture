@@ -26,9 +26,9 @@
         "ramsey/uuid": "^4.2"
     },
     "scripts": {
-        "export-ce": "git checkout ce && git checkout main src plugins_ce",
-        "export-ee": "git checkout ee && git checkout main src plugins_ce plugins_ee",
-        "export-cloud": "git checkout cloud && git checkout main src plugins_ce plugins_ee plugins_cloud",
+        "export-ce": "git checkout ce && git checkout main src tests plugins_ce",
+        "export-ee": "git checkout ee && git checkout main src tests plugins_ce plugins_ee",
+        "export-cloud": "git checkout cloud && git checkout main src tests plugins_ce plugins_ee plugins_cloud",
         "import-ce": "git checkout ee && git merge ce",
         "import-ee": "git checkout cloud && git merge ee",
         "import-cloud": "git checkout main && git merge cloud"
