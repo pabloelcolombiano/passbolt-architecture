@@ -1,16 +1,12 @@
 # Passbolt architecture v2
 Pilot study for Passbolt architecture
 
-## Concept
-
 ## Branches
-### Main
-This is the main branch.
-### Develop
-This is the branch for development.
-### Common
+### main
+This is the main branch, where all the development happens.
+### ce
 This is the branch with the basic features.
-### Entreprise
+### ee
 This is the branch with the premium features.
-### Cloud
+### cloud
 This is the branch with the premium and the cloud features.
